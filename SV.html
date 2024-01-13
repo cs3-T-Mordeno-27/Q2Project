@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+			<title>Student Favorites</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+			<style>
+			body{
+				justify-content:center;
+				font-family: "Poppins", sans-serif;
+			}
+			a {
+				text-decoration: none;
+				color: black;
+				z-index: 3;
+			}
+			.a {
+				position: absolute;
+				top: 10px;
+				right: 94%;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 15px;
+				margin-top:25px;
+			}
+			.a a:hover{
+				background-color: #ADD8E6;
+				border-radius:10px;
+				border: 3px solid white;
+				padding:5px;
+				border-radius: 20px;
+				transition: 0.2s;
+			}
+			.s {
+				position: absolute;
+				top: 10px;
+				right: 86%;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 15px;
+				margin-top:25px;
+			}
+			.s a:hover{
+				background-color: #ADD8E6;
+				border-radius:10px;
+				border: 3px solid white;
+				padding:5px;
+				border-radius: 20px;
+				transition: 0.2s;
+			}
+			.e {
+				position: absolute;
+				top: 10px;
+				right: 81%;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 15px;
+				margin-top:25px;
+			}
+			.e a:hover{
+				background-color: #ADD8E6;
+				border-radius:10px;
+				border: 3px solid white;
+				padding:5px;
+				border-radius: 20px;
+				transition: 0.2s;
+			}
+			.o {text-decoration: none;	
+				position: absolute;
+				top: 10px;
+				right: 73%;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 15px;
+				margin-top:25px;
+			}
+			.o a:hover{
+				background-color: #ADD8E6;
+				border-radius:10px;
+				border: 3px solid white;
+				padding:5px;
+				border-radius: 20px;
+				transition: 0.2s;
+			}
+			.i {
+				position: absolute;
+				top: 10px;
+				right: 59%;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 15px;
+				margin-top:25px;
+			}
+			.i a:hover{
+				background-color: #ADD8E6;
+				border-radius:10px;
+				border: 3px solid white;
+				padding:5px;
+				border-radius: 20px;
+				transition: 0.2s;
+			}
+			h1{
+				text-align:center;
+				color: black;
+				font-size:40px;
+				margin-top:90px;
+			}
+			.slideshow-container {
+			  max-width: 700px;
+			  max-height: 700px;
+			  position: relative;
+			  margin: auto;
+			}
+			.mySlides {
+			  display: block;
+			  margin-top: 20px;
+			  margin-bottom: 20px;
+			}
+			.mySlides img{
+				height:500px;
+				border-radius:20px;
+			}
+			.prev, .next {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 50%;
+			  width: auto;
+			  margin-top: -22px;
+			  padding: 16px;
+			  color: white;
+			  font-weight: bold;
+			  font-size: 18px;
+			  transition: 0.6s ease;
+			  border-radius: 0 3px 3px 0;
+			  user-select: none;
+			}
+			.next {
+			  right: 0;
+			  border-radius: 3px 0 0 3px;
+			}
+			.prev:hover, .next:hover {
+			  background-color: #FC7174;
+			}
+			.dot {
+			  cursor: pointer;
+			  height: 15px;
+			  width: 15px;
+			  margin-bottom:30px;
+			  background-color: #FDA26B;
+			  border-radius: 50%;
+			  display: inline-block;
+			  transition: background-color 0.6s ease;
+			}
+			.active, .dot:hover {
+			  background-color: #EB6859;
+			}
+			.fade {
+			  animation-name: fade;
+			  animation-duration: 1.5s;
+			}
+
+			@keyframes fade {
+			  from {opacity: .4}
+			  to {opacity: 1}
+			}
+			#text{
+				text-align:center;
+				font-family: Oranienbaum;
+				font-style: italic;
+				color:black;
+				font-weight:bold;
+			}
+			#st {
+			  text-align:center;
+			  font-size: 15px;
+			  margin-left:250px;
+			  margin-right:250px;
+			  padding:30px;
+			}
+			#pp {
+			  text-align:center;
+			  font-size: 15px;
+			  padding:30px;
+			  margin-bottom:50px;
+			}
+			.pics1 img{
+				height: 500px;
+				width: 300px;
+				opacity:0.6;
+				border-radius:5px;				
+			}
+			.pics2 img{
+				height: 500px;
+				width: 300px;
+				opacity:0.6;
+				border-radius:5px;
+			}
+			.pics3 img{
+				height: 500px;
+				width: 300px;
+				opacity:0.6;	
+				border-radius:5px;
+			}
+			.x{
+			color: #6F8FAF;
+			text-shadow: 3px 3px black;
+			font-size: 50px;
+			position: absolute;
+			top: 155%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+			}
+			.x1{
+			color: #6F8FAF;
+			text-shadow: 3px 3px black;
+			font-size: 50px;
+			position: absolute;
+			top: 230%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+			}
+			.x2{
+			color: #6F8FAF;
+			text-shadow: 3px 3px black;
+			font-size: 50px;
+			position: absolute;
+			top: 300%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+			}
+			#last {
+			  text-align:center;
+			  font-size: 15px;
+			  padding:30px;
+			  margin-top:50px;
+			  margin-bottom:90px;
+			}
+			</style>
+		</head>
+		<body>
+			<h2 class="a">
+				<a href="main.html"> HOME</a>
+			</h2>
+			<h2 class="s">
+				<a href="AB.html"> ABOUT US</a>
+			</h2>
+			<h2 class="e"> 
+				<a href="cs.html"> FAQS</a>
+			</h2>
+			<h2 class="o">
+				<a href="facilities.html"> FACILITIES</a>
+			</h2>
+			<h2 class="i">
+				<a href="SV.html"> STUDENT FAVORITES</a>
+			</h2>
+			
+			<h1>Student Favorites</h1>
+			<p id="st">High school is a rollercoaster with endless twists and turns, an experience filled with both laughter and tears. As scholars of a prestigious school with state-of-the-art facilities and opportunities that know no bounds, education is a top priority. However, we are just kids trying to cope and survive the tedious curriculum. <br><br>
+			</p>
+			<br>
+				<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="page2.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+				<img src="girls.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+				<img src="noli.jpg" style="width:100%">
+			</div> 
+			
+			<div class="mySlides fade">
+				<img src="music.jpg" style="width:100%">
+			</div> 
+			<div class="mySlides fade">
+				<img src="sir.jpg" style="width:100%">
+			</div>
+			<div>
+			<div class="mySlides fade">
+				<img src="na.jpg" style="width:100%">
+			</div>
+			<div>
+			<div>
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			  <span class="dot" onclick="currentSlide(4)"></span>
+			  <span class="dot" onclick="currentSlide(5)"></span>
+			  <span class="dot" onclick="currentSlide(6)"></span>
+			</div>
+			<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+			</script>
+			
+			<p id="pp">
+			The annual Intramurals and StemFest are outlets to take a break from the pressure. Assessments like the Noli Me Tangere roleplay are where good memories start. As the gates open for city scholars to go home, a sunset accompanies the theme, creating a serene experience. </p>
+			
+
+			<div class="pics1">
+				<img src="dg.jpg" style="width:100%">
+					<div class="x">INTRAMURALS</div>
+			</div>
+
+			<div class="pics2">
+				<img src="sf.jpg" style="width:100%">
+					<div class="x1">STEM FEST</div>
+			</div>
+
+			<div class="pics3">
+				<img src="sun.jpg" style="width:100%">
+					<div class="x2">& SUNSETS</div>
+			</div> 
+			
+			<p id="last">Life in PISAY is more than studying and answering assessments. It is about making relationships, building strong friendships, creating memories together, and the end goal,  graduating together.  So, come and join us and experience life as an isko, pagasa ng bayan. </p>
+		</body>
+	</html>
+	
+    
+
+      
+
+
